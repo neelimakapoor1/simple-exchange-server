@@ -1,0 +1,33 @@
+{
+  "name": "exchange-server",
+  "version": "1.0.0",
+  "description": "Simplified exchange server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --recursive --exit --timeout 15000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neelimakapoor1/exchange-server.git"
+  },
+  "keywords": [
+    "exchange",
+    "grape"
+  ],
+  "author": "Neelima Kapoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neelimakapoor1/exchange-server/issues"
+  },
+  "homepage": "https://github.com/neelimakapoor1/exchange-server#readme",
+  "dependencies": {
+    "grenache-nodejs-link": "^0.7.13",
+    "grenache-nodejs-ws": "^0.7.10",
+    "heap-js": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
