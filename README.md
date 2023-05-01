@@ -16,5 +16,5 @@ grape --dp 20002 --aph 40001 --bn '127.0.0.1:20001'
 Boot the simplied exchange and add sample orders:
 
 ```
-node index.js
+npm test
 ```
