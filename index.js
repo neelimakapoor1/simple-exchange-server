@@ -1,9 +1,16 @@
-const ExchangeServer = require('./exchangeserver.js');
-const ExchangeClient = require('./exchangeclient.js');
+const ExchangeServer = require('./lib/exchangeserver.js');
+const ExchangeClient = require('./lib/exchangeclient.js');
 
-const port1 = 1024 + Math.floor(Math.random() * 1000);
-const server1 = new ExchangeServer(port1);
-const port2 = 1024 + Math.floor(Math.random() * 1000);
-const server2 = new ExchangeServer(port2);
-const client1 = new ExchangeClient();
-const client2 = new ExchangeClient();
+const delay = (duration) => new Promise(resolve => setTimeout(resolve, duration));
+
+async function init(){
+    const port = 1024 + Math.floor(Math.random() * 1000);
+    const grapeUrl =  'http://' + process.argv[2] + ':' + process.argv[3];
+    const server = new ExchangeServer(port, grapeUrl);
+    const client = new ExchangeClient(grapeUrl);
+
+    console.log('Worker port', port);
+    console.log('Grape URL', grapeUrl);
+}
+
+init();
